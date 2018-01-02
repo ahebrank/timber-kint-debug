@@ -14,7 +14,7 @@ class Timber_Kint_Debug {
    *
    * @var integer
    */
-  private $maxLevels = 4;
+  private $max_depth = 4;
 
   function __construct() {
     add_filter('get_twig', array($this,'add_to_twig'));
@@ -45,7 +45,7 @@ class Timber_Kint_Debug {
       if (!class_exists('Kint')) {
         require_once(__DIR__ . '/vendor/autoload.php');
       }
-      Kint::$maxLevels = $this->maxLevels;
+      Kint::$max_depth = $this->max_depth;
       if ($context) {
         Kint::dump($context);
       } else {
