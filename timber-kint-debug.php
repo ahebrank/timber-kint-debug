@@ -20,7 +20,7 @@ class Timber_Kint_Debug {
   function call_kint($twig, $vars, $context = FALSE) {
     if ($twig->isDebug()) {
       if (!class_exists('Kint')) {
-        return 'Kint class doesn\'t exist! You can download it from <a href="https://wordpress.org/plugins/kint-debugger/">https://wordpress.org/plugins/kint-debugger/</a>';
+        require_once(__DIR__ . '/vendor/autoload.php');
       }
       if ($context) {
         Kint::dump($context);

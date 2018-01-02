@@ -1,0 +1,7 @@
+{
+    "name": "ahebrank/timber-kint-debug",
+    "type": "wordpress-plugin",
+    "require": {
+        "kint-php/kint": "^2.2"
+    }
+}
